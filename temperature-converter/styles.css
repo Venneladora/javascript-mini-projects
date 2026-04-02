@@ -1,0 +1,189 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    background: #e0e0e0;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    /* Animation */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Input */
+#textBox {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+#textBox:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.5);
+    outline: none;
+}
+
+/* Radio Group */
+.radio-group {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.radio-group input {
+    margin-right: 8px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.radio-group label {
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #4facfe, #007bff);
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover */
+button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+/* Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Result */
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
+
+    animation: pop 0.5s ease;
+}
+
+/* Result Animation */
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 🌙 Optional Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1e1e2f, #121212);
+    }
+
+    .container {
+        background: #2c2c3a;
+        color: white;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    #textBox {
+        background: #444;
+        color: white;
+        border: 1px solid #666;
+    }
+
+    .radio-group label {
+        color: #ccc;
+    }
+
+    #result {
+        color: #4facfe;
+    }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #textBox {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form onsubmit="return false;">
+    <h1>💰 Compound Interest Calculator</h1>
+
+    <label>Principal Amount:</label>
+    <input type="number" id="principal" placeholder="Enter principal">
+
+    <label>Rate Of Interest (%):</label>
+    <input type="number" id="rate" placeholder="Enter interest rate">
+
+    <label>Years:</label>
+    <input type="number" id="year" placeholder="Enter years">
+
+    <label>Compounded Per Year:</label>
+    <input type="number" id="nooftimes" placeholder="Times per year">
+
+    <button type="button" onclick="calculateCI()">Calculate</button>
+    <button type="button" onclick="resetFields()">Reset</button><br>
+
+    <p>Total Amount: <span id="total-amount">₹0.00</span></p>
+    <p>Compound Interest: <span id="ci-amount">₹0.00</span></p>
+</form>
+
+<script src="index.js"></script>
+</body>
+</html>
